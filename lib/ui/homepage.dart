@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guruji/ui/faq.dart';
+import 'package:guruji/ui/profile.dart';
 import 'package:guruji/ui/search_page.dart';
 import 'package:guruji/ui/wallet.dart';
 
@@ -22,6 +23,8 @@ class _HomePageState extends State<HomePage> {
     }
 
     if (index == 0) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
       setState(() {
         _currentSelected = index;
       });
@@ -32,6 +35,8 @@ class _HomePageState extends State<HomePage> {
       });
     }
     if (index == 3) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ProfilePgae()));
       setState(() {
         _currentSelected = index;
       });
@@ -140,7 +145,24 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        showDialog(
+                            context: context,
+                            // barrierDismissible: false,
+                            builder: (BuildContext context) {
+                              return Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Text(
+                                    "Change language?",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              );
+                            });
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Image.asset(
