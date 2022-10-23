@@ -405,6 +405,33 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 40, 8, 8),
+                          child: Row(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                                child: CircleAvatar(
+                                  radius: 20,
+                                  backgroundImage: AssetImage(
+                                      "assets/remaining/1654671737698.jpg"),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 70,
+                              ),
+                              Image.asset(
+                                "assets/live guruji/1f525.png",
+                                height: 15,
+                                width: 15,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              const Text("5")
+                            ],
+                          ),
+                        ),
                         // color: LinearGradient(colors: ),
                       )
                     ],
@@ -478,15 +505,21 @@ class _HomePageState extends State<HomePage> {
                                 Expanded(
                                   flex: 4,
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    width: screenWidth,
+                                    decoration: const BoxDecoration(
                                       image: DecorationImage(
-                                        image: AssetImage(
-                                            "assets/live guruji/boy.webp"),
-                                      ),
+                                          image: AssetImage(
+                                            "assets/live guruji/DELHI.jpg",
+                                          ),
+                                          fit: BoxFit.cover),
                                     ),
-                                    child: Image.asset(
-                                      'assets/live guruji/DELHI.jpg',
-                                      fit: BoxFit.cover,
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(40.0),
+                                      child: CircleAvatar(
+                                        radius: 20,
+                                        backgroundImage: AssetImage(
+                                            "assets/remaining/1654671737698.jpg"),
+                                      ),
                                     ),
                                   ),
                                 ),

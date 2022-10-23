@@ -220,15 +220,15 @@ class _ProfilePgaeState extends State<ProfilePgae> {
                             builder: (context) => WalletScreen()));
                   },
                   style: OutlinedButton.styleFrom(
-                    fixedSize: Size(screenWidth, screenHeight / 16),
+                    fixedSize: Size(screenWidth, screenHeight / 15),
                     shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black, width: 2),
+                      side: const BorderSide(color: Colors.black, width: 2),
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   child: const Text(
                     "Log in / SIgn up",
-                    style: TextStyle(fontSize: 12, color: Colors.black),
+                    style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
                 ),
 
@@ -251,118 +251,105 @@ class _ProfilePgaeState extends State<ProfilePgae> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => WalletScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assets/live guruji/orders.png",
-                              color: Colors.black,
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            const Text(
-                              "Balance",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
-                            )
-                          ],
-                        ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WalletScreen()));
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            "assets/live guruji/orders.png",
+                            color: Colors.black,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            "Balance",
+                            style: TextStyle(fontSize: 12, color: Colors.black),
+                          )
+                        ],
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => WalletScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assets/live guruji/live orders.png",
-                              color: Colors.black,
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            const Text(
-                              "Live Orders",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
-                            ),
-                          ],
-                        ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WalletScreen()));
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            "assets/live guruji/live orders.png",
+                            color: Colors.black,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            "Live Orders",
+                            style: TextStyle(fontSize: 12, color: Colors.black),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => WalletScreen()));
-                        },
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assets/live guruji/video report.png",
-                              color: Colors.black,
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            const Text(
-                              "Video Report",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
-                            ),
-                          ],
-                        ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WalletScreen()));
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            "assets/live guruji/video report.png",
+                            color: Colors.black,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            "Video Report",
+                            style: TextStyle(fontSize: 12, color: Colors.black),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => WalletScreen()));
-                        },
-                        child: Column(
-                          // mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              "assets/live guruji/birth chart.png",
-                              color: Colors.black,
-                            ),
-                            const SizedBox(
-                              height: 5,
-                            ),
-                            const Text(
-                              "Birth Chart",
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
-                            ),
-                          ],
-                        ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WalletScreen()));
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            "assets/live guruji/birth chart.png",
+                            color: Colors.black,
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          const Text(
+                            "Birth Chart",
+                            style: TextStyle(fontSize: 12, color: Colors.black),
+                          ),
+                        ],
                       ),
                     ),
                   ],
