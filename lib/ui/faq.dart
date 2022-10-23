@@ -49,7 +49,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -90,7 +90,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -152,7 +152,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -205,7 +205,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -255,7 +255,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -308,7 +308,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -358,7 +358,7 @@ class _FaqScreenState extends State<FaqScreen> {
                         height: screenHeight / 5.2,
                         width: screenWidth / 4,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 247, 244, 244),
+                          color: const Color.fromARGB(255, 247, 244, 244),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Column(
@@ -419,7 +419,7 @@ class _FaqScreenState extends State<FaqScreen> {
       bottomNavigationBar: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
-              fixedSize: Size(screenWidth, screenHeight / 16)),
+              fixedSize: Size(screenWidth, screenHeight / 12)),
           child: const Text("Message Us")),
     );
   }
