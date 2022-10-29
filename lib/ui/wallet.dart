@@ -1,14 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:guruji/ui/verification.dart';
 
 class WalletScreen extends StatefulWidget {
   const WalletScreen({super.key});
-
+  static String verify = "";
   @override
   State<WalletScreen> createState() => _WalletScreenState();
 }
 
 class _WalletScreenState extends State<WalletScreen> {
+  var phone;
   TextEditingController phoneController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
@@ -37,6 +41,9 @@ class _WalletScreenState extends State<WalletScreen> {
               elevation: 5,
               child: TextField(
                 controller: phoneController,
+                onChanged: (value) {
+                  phone = value;
+                },
                 decoration: const InputDecoration(
                   hintText: "Phone Number",
                   border: OutlineInputBorder(borderSide: BorderSide.none),
@@ -48,9 +55,21 @@ class _WalletScreenState extends State<WalletScreen> {
             ),
             Flexible(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () async {
+                  await FirebaseAuth.instance.verifyPhoneNumber(
+                    phoneNumber: '$phone',
+                    verificationCompleted: (PhoneAuthCredential credential) {},
+                    verificationFailed: (FirebaseAuthException e) {},
+                    codeSent: (String verificationId, int? resendToken) {
+                      WalletScreen.verify;
+                      Navigator.pushNamed(context, "/verify");
+                    },
+                    codeAutoRetrievalTimeout: (String verificationId) {},
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey,
+                  backgroundColor:
+                      phone == "" ? Colors.grey : Colors.greenAccent,
                   fixedSize: Size(screenWidth, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),

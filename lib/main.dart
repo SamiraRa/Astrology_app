@@ -1,7 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:guruji/ui/homepage.dart';
+import 'package:guruji/ui/verification.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -18,6 +22,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const HomePage(),
+      routes: <String, WidgetBuilder>{
+        "/verify": (context) {
+          return VerificationScreen();
+        },
+        "/homepage": (context) {
+          return HomePage();
+        }
+      },
     );
   }
 }
