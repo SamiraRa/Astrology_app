@@ -74,16 +74,143 @@ class _GuidanceScreenState extends State<GuidanceScreen> {
                 child: TabBarView(
                   children: [
                     Icon(Icons.directions_car),
-                    Icon(Icons.directions_transit),
+                    // Icon(Icons.directions_transit),
+
+                    //=====================================================================================================================================================
+                    //=====================================================================================================================================================
+                    //=================================================Guidance Q&A==========================================================================
+                    //=====================================================================================================================================================
+                    //=====================================================================================================================================================
                     ListView.builder(itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: screenHeight / 6,
+                          // height: screenHeight / 6,
+                          // width: screenWidth / 1.2,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+
+                            // gradient: const LinearGradient(
+                            //   begin: Alignment.topRight,
+                            //   end: Alignment.bottomLeft,
+                            //   colors: [
+                            //     Colors.blue,
+                            //     Colors.red,
+                            //   ],
+                            // ),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  const Padding(
+                                    padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
+                                    child: CircleAvatar(
+                                      radius: 20,
+                                      backgroundImage: AssetImage(
+                                          "assets/remaining/1654671737698.jpg"),
+                                    ),
+                                  ),
+                                  Text("User***"),
+                                  Spacer(),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(
+                                      "assets/live guruji/Repeat Grid 2@2x.png",
+                                      color: Colors.black,
+                                      height: 20,
+                                      width: 20,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                                child: Text(
+                                    "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
+                              ),
+                              // SizedBox(
+                              //   height: 2,
+                              // ),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: const Text(
+                                    "Click  to read the full article",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.fromLTRB(22, 0, 0, 0),
+                                child: Text("2 hours ago"),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        25, 10, 10, 10),
+                                    child: Image.asset(
+                                      "assets/live guruji/heart.png",
+                                      height: 15,
+                                      width: 15,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        25, 10, 10, 10),
+                                    child: Image.asset(
+                                      "assets/live guruji/comment-1.png",
+                                      height: 15,
+                                      width: 15,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        25, 10, 10, 10),
+                                    child: Image.asset(
+                                      "assets/live guruji/share-1.png",
+                                      height: 15,
+                                      width: 15,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              const Divider(
+                                height: 1,
+                                thickness: 1,
+                                color: Colors.grey,
+                              )
+                            ],
+                          ),
+                          // color: LinearGradient(colors: ),
+                        ),
+                      );
+                    }),
+                    //=====================================================================================================================================================
+                    //=====================================================================================================================================================
+                    //=================================================Live Sessions==========================================================================
+                    //=====================================================================================================================================================
+                    //=====================================================================================================================================================
+                    ListView.builder(itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: screenHeight / 5.1,
                           width: screenWidth / 1.2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image:
                                     AssetImage("assets/live guruji/DELHI.jpg"),
                                 fit: BoxFit.cover),
@@ -173,13 +300,13 @@ class _GuidanceScreenState extends State<GuidanceScreen> {
                                     Container(
                                         decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.horizontal(
+                                                const BorderRadius.horizontal(
                                                     left: Radius.circular(20),
                                                     right: Radius.circular(15)),
                                             border: Border.all(
                                                 width: 1, color: Colors.grey)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(4.0),
+                                        child: const Padding(
+                                          padding: EdgeInsets.all(4.0),
                                           child: Text(
                                             "Share",
                                             style: TextStyle(

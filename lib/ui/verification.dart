@@ -51,7 +51,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             Center(
               child: Text(
@@ -81,42 +81,45 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   Directionality(
                     // Specify direction if desired
                     textDirection: TextDirection.ltr,
-                    child: Pinput(
-                      controller: pinController,
-                      focusNode: focusNode,
-                      length: 6,
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Pinput(
+                        controller: pinController,
+                        focusNode: focusNode,
+                        length: 6,
 
-                      defaultPinTheme: defaultPinTheme,
+                        defaultPinTheme: defaultPinTheme,
 
-                      onChanged: (value) {
-                        code = value;
-                      },
-                      // cursor: Column(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: [
-                      //     Container(
-                      //       margin: const EdgeInsets.only(bottom: 9),
-                      //       width: 22,
-                      //       height: 1,
-                      //       color: focusedBorderColor,
-                      //     ),
-                      //   ],
-                      // ),
-                      focusedPinTheme: defaultPinTheme.copyWith(
-                        decoration: defaultPinTheme.decoration!.copyWith(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: focusedBorderColor),
+                        onChanged: (value) {
+                          code = value;
+                        },
+                        // cursor: Column(
+                        //   mainAxisAlignment: MainAxisAlignment.end,
+                        //   children: [
+                        //     Container(
+                        //       margin: const EdgeInsets.only(bottom: 9),
+                        //       width: 22,
+                        //       height: 1,
+                        //       color: focusedBorderColor,
+                        //     ),
+                        //   ],
+                        // ),
+                        focusedPinTheme: defaultPinTheme.copyWith(
+                          decoration: defaultPinTheme.decoration!.copyWith(
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: focusedBorderColor),
+                          ),
                         ),
-                      ),
-                      submittedPinTheme: defaultPinTheme.copyWith(
-                        decoration: defaultPinTheme.decoration!.copyWith(
-                          color: fillColor,
-                          borderRadius: BorderRadius.circular(19),
-                          border: Border.all(color: focusedBorderColor),
+                        submittedPinTheme: defaultPinTheme.copyWith(
+                          decoration: defaultPinTheme.decoration!.copyWith(
+                            color: fillColor,
+                            borderRadius: BorderRadius.circular(19),
+                            border: Border.all(color: focusedBorderColor),
+                          ),
                         ),
-                      ),
-                      errorPinTheme: defaultPinTheme.copyBorderWith(
-                        border: Border.all(color: Colors.redAccent),
+                        errorPinTheme: defaultPinTheme.copyBorderWith(
+                          border: Border.all(color: Colors.redAccent),
+                        ),
                       ),
                     ),
                   ),
