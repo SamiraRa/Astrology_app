@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:guruji/ui/guidance.dart';
 import 'package:guruji/ui/homepage.dart';
 import 'package:guruji/ui/profile.dart';
+import 'package:guruji/ui/video.dart';
 
 class ConversationScreen extends StatefulWidget {
   const ConversationScreen({super.key});
@@ -48,6 +49,24 @@ class _ConversationScreenState extends State<ConversationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => VideoCallScreen()));
+            },
+            icon: Icon(
+              Icons.video_camera_front_rounded,
+              color: Colors.black,
+            ),
+          ),
+          SizedBox(
+            width: 20,
+          )
+        ],
+      ),
       body: Center(
         child: Column(
           children: [

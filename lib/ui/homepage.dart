@@ -151,22 +151,22 @@ class _HomePageState extends State<HomePage> {
 
                   InkWell(
                     onTap: () {
-                      showDialog(
-                          context: context,
-                          // barrierDismissible: false,
-                          builder: (BuildContext context) {
-                            return Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "Change language?",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            );
-                          });
+                      // showDialog(
+                      //     context: context,
+                      //     // barrierDismissible: false,
+                      //     builder: (BuildContext context) {
+                      //       return Column(
+                      //         mainAxisAlignment: MainAxisAlignment.center,
+                      //         children: const [
+                      //           Text(
+                      //             "Change language?",
+                      //             style: TextStyle(
+                      //                 fontSize: 20,
+                      //                 fontWeight: FontWeight.w500),
+                      //           )
+                      //         ],
+                      //       );
+                      //     });
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
